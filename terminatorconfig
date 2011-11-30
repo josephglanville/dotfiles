@@ -1,0 +1,23 @@
+[global_config]
+  enabled_plugins = TerminalShot, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+[keybindings]
+[profiles]
+  [[default]]
+    scrollbar_position = hidden
+    palette = "#000000:#b25555:#4e9a06:#c4a000:#3465a4:#75507b:#06989a:#d3d7cf:#555753:#ff5959:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
+    background_darkness = 0.74
+    background_type = transparent
+    use_system_font = False
+    foreground_color = "#ffffff"
+    show_titlebar = False
+    font = Terminus 12
+    scrollback_infinite = True
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]
