@@ -1,0 +1,2 @@
+export MPD_HOST="10.10.0.2"
+export MPD_PORT="6600"

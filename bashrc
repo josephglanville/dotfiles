@@ -1,9 +1,22 @@
+# $HOME/.bashrc
+# Author: joseph.glanville@orionvm.com.au
+
+export PATH="$PATH:$HOME/bin"
 export EDITOR="vim"
+
+source $HOME/.mpd
+
 ## Check for an interactive session
 [ -z "$PS1" ] && return
 
-alias ls='ls --color=auto'
+alias ls='ls -h --color=auto'
 alias pacman='sudo /usr/bin/pacman'
+alias grep='grep --color=auto'
+alias more='less'
+alias df='df -h'
+alias du='du -c -h'
+alias mkdir='mkdir -p -v'
+alias reboot='sudo reboot'
 alias shutdown='sudo shutdown -Ph now'
 alias suspend='sudo pm-suspend'
 
