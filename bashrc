@@ -4,7 +4,7 @@
 export PATH="$PATH:$HOME/bin"
 export EDITOR="vim"
 
-source $HOME/.mpd
+source $HOME/.mpdrc
 
 ## Check for an interactive session
 [ -z "$PS1" ] && return
