@@ -1,0 +1,14 @@
+URxvt.depth: 32
+URxvt.background: #000000
+URxvt.transparent: true
+! URxvt.shading: 0 to 99 darkens, 101 to 200 lightens
+URxvt.shading: 20
+
+URxvt.foreground: #FFFFFF
+URxvt.font: xft:terminus:size=12
+
+URxvt.termName:screen-256color
+URxvt.scrollBar: false
+URxvt.perl-ext-common: default,clipboard,vtwheel
+URxvt.keysym.C-c: perl:clipboard:copy
+URxvt.keysym.C-v: perl:clipboard:paste
