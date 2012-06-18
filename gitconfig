@@ -1,0 +1,7 @@
+[user]
+	name = Joseph Glanville
+	email = joseph.glanville@orionvm.com.au
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%Cgreen%an%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+	br = branch -av --color --list
+	all = !git branch -a | sed 's/^*//' | grep -ve '->' | xargs git lg

@@ -16,9 +16,15 @@ alias more='less'
 alias df='df -h'
 alias du='du -c -h'
 alias mkdir='mkdir -p -v'
+
 alias reboot='sudo reboot'
 alias shutdown='sudo shutdown -Ph now'
 alias suspend='sudo pm-suspend'
+
+alias xresources-update='xrdb -merge ~/.Xresources'
+
+alias commit='git commit -a'
+alias commitsigned='git commit -a --signoff'
 
 txtblk='\e[0;30m' # Black - Regular
 txtred='\e[0;31m' # Red
