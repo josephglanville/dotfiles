@@ -9,8 +9,8 @@ URxvt.font: xft:terminus:size=12
 URxvt.termName:screen-256color
 URxvt.scrollBar: false
 URxvt.perl-ext-common: default,clipboard,vtwheel
-URxvt.keysym.C-c: perl:clipboard:copy
-URxvt.keysym.C-v: perl:clipboard:paste
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
 
 
 URxvt.colorUL: #86a2b0
