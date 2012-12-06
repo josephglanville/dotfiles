@@ -16,6 +16,8 @@ alias more='less'
 alias df='df -h'
 alias du='du -c -h'
 alias mkdir='mkdir -p -v'
+alias emacs='emacs -nw'
+alias rc.d='sudo rc.d'
 
 alias reboot='sudo reboot'
 alias shutdown='sudo shutdown -Ph now'

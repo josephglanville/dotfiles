@@ -2,6 +2,7 @@
 
 manifest="
 bashrc:$HOME/.bashrc
+zshrc:$HOME/.zshrc
 gitconfig:$HOME/.gitconfig
 mpdrc:$HOME/.mpdrc
 vimrc:$HOME/.vimrc

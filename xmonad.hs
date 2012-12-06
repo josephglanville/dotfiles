@@ -21,29 +21,31 @@ myManageHook = composeAll
     
 myWorkspaces = ["term", "web", "code", "irc", "media", "music", "else"]
 
-myLayoutHook = onWorkspace "media" myFullscreen $ onWorkspace "web" myBorderless $ myLayout
-	where
-		myFullscreen = noBorders ( Full )
-		myBorderless = noBorders (avoidStruts  $  layoutHook defaultConfig)
-		myLayout = avoidStruts  $  layoutHook defaultConfig
+myLayoutHook = onWorkspace "media" myFullscreen $
+			   onWorkspace "web" myBorderless $
+			   onWorkspace "music" myFullscreen $
+			   myLayout where
+					myFullscreen = noBorders (Full)
+					myBorderless = noBorders (avoidStruts $ layoutHook defaultConfig)
+					myLayout = avoidStruts $ layoutHook defaultConfig
 
 
 main = do
     xmproc <- spawnPipe "/usr/bin/xmobar /home/jpg/.xmobarrc"
     xmonad $ defaultConfig
 	{
-		manageHook = manageDocks <+> myManageHook -- make sure to include myManageHook definition from above
-                        <+> manageHook defaultConfig
+		manageHook = manageDocks <+> myManageHook <+> manageHook defaultConfig
 		, layoutHook = myLayoutHook
 		, workspaces = myWorkspaces
 		, normalBorderColor = "#000000"
-		, focusedBorderColor = "#1793d1"
+		, focusedBorderColor = "#597BC5"
 		, terminal = "terminator"
-        , logHook = dynamicLogWithPP $ xmobarPP
+		, logHook = dynamicLogWithPP $ xmobarPP
 			{ ppOutput = hPutStrLn xmproc
-			, ppTitle = xmobarColor "green" "" . shorten 50
+			, ppCurrent = xmobarColor "#D8AD4C" "" . wrap "[" "]"
+			, ppTitle = xmobarColor "#99ad6a" ""
 			}
-        , modMask = mod4Mask -- Rebind Mod to the Windows key
+        , modMask = mod4Mask
 	}
 	`additionalKeys`
 		[
