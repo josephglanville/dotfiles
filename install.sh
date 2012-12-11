@@ -10,6 +10,7 @@ xinitrc:$HOME/.xinitrc
 xmobarrc:$HOME/.xmobarrc
 xmonad.hs:$HOME/.xmonad/xmonad.hs
 xresources:$HOME/.Xresources
+zprofile:$HOME/.zprofile
 "
 for file in $manifest; do
 	src=${file%%:*}
