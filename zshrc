@@ -27,6 +27,7 @@ export ZSH_THEME="prose"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+unsetopt correct_all
 
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/site_perl:/usr/bin/core_perl:/home/jpg/bin
