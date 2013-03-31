@@ -9,6 +9,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'groenewege/vim-less'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'nono/vim-handlebars'
+Bundle 'vim-ruby/vim-ruby'
 filetype plugin indent on
 
 set ts=4
