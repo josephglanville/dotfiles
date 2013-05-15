@@ -1,6 +1,6 @@
 [user]
 	name = Joseph Glanville
-	email = joseph.glanville@orionvm.com.au
+	email = joseph@cloudscaling.com
 [alias]
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%Cgreen%an%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 	br = branch -av --color --list
@@ -11,3 +11,8 @@
 	ui = true
 [push]
 	default = simple
+[sendemail]
+	smtpencryption = tls
+	smtpserver = smtp.gmail.com
+	smtpuser = joseph@cloudscaling.com
+	smtpserverport = 587
