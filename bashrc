@@ -9,25 +9,6 @@ source $HOME/.mpdrc
 ## Check for an interactive session
 [ -z "$PS1" ] && return
 
-alias ls='ls -h --color=auto'
-alias pacman='sudo /usr/bin/pacman'
-alias grep='grep --color=auto'
-alias more='less'
-alias df='df -h'
-alias du='du -c -h'
-alias mkdir='mkdir -p -v'
-alias emacs='emacs -nw'
-alias rc.d='sudo rc.d'
-
-alias reboot='sudo reboot'
-alias shutdown='sudo shutdown -Ph now'
-alias suspend='sudo pm-suspend'
-
-alias xresources-update='xrdb -merge ~/.Xresources'
-
-alias commit='git commit -a'
-alias commitsigned='git commit -a --signoff'
-
 txtblk='\e[0;30m' # Black - Regular
 txtred='\e[0;31m' # Red
 txtgrn='\e[0;32m' # Green
@@ -76,3 +57,5 @@ fi
 W="\e[0m"
 
 PS1="\[$B\]┌─\[$W\][ \[$Y\]\A \[$W\]][ \[$G\]\h:\w \[$W\]]\n\[$B\]└─\[$Y\]> \[$W\]"
+
+source $HOME/.aliases

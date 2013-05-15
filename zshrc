@@ -35,23 +35,4 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bi
 export EDITOR="vim"
 
 source $HOME/.mpdrc
-
-alias ls='ls -h --color=auto'
-alias pacman='sudo /usr/bin/pacman-color'
-alias grep='grep --color=auto'
-alias more='less'
-alias df='df -h'
-alias du='du -c -h'
-alias mkdir='mkdir -p -v'
-alias emacs='emacs -nw'
-alias rc.d='sudo rc.d'
-alias su='sudo su'
-
-alias reboot='sudo reboot'
-alias shutdown='sudo shutdown -Ph now'
-alias suspend='sudo pm-suspend'
-
-alias xresources-update='xrdb -merge ~/.Xresources'
-
-alias commit='git commit -a'
-alias commitsigned='git commit -a --signoff'
+source $HOME/.aliases

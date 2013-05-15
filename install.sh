@@ -11,6 +11,7 @@ xmobarrc:$HOME/.xmobarrc
 xmonad.hs:$HOME/.xmonad/xmonad.hs
 xresources:$HOME/.Xresources
 zprofile:$HOME/.zprofile
+aliases:$HOME/.aliases
 "
 for file in $manifest; do
 	src=${file%%:*}
