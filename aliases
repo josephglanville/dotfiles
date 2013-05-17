@@ -6,8 +6,11 @@ alias df='df -h'
 alias du='du -c -h'
 alias mkdir='mkdir -p -v'
 alias emacs='emacs -nw'
-alias rc.d='sudo rc.d'
 alias su='sudo su'
+
+# Service management
+alias service="sudo service"
+alias systemctl="sudo systemctl"
 
 # Package Managers
 alias pacman="sudo pacman"
