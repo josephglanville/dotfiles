@@ -1,0 +1,32 @@
+# Utilities and programs
+alias ls='ls -h --color=auto'
+alias grep='grep --color=auto'
+alias more='less'
+alias df='df -h'
+alias du='du -c -h'
+alias mkdir='mkdir -p -v'
+alias emacs='emacs -nw'
+alias su='sudo su'
+
+# Service management
+alias service="sudo service"
+alias systemctl="sudo systemctl"
+
+# Package Managers
+alias pacman="sudo pacman"
+alias apt-get="sudo apt-get"
+alias dpkg="sudo dpkg"
+alias yum="sudo yum"
+alias rpm="sudo rpm"
+
+# Power management
+alias reboot='sudo reboot'
+alias shutdown='sudo shutdown -Ph now'
+alias suspend='sudo pm-suspend'
+
+# X related
+alias xresources-update='xrdb -merge ~/.Xresources'
+
+# Source code management
+alias commit='git commit -a'
+alias commitsigned='git commit -a --signoff'
