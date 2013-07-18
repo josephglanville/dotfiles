@@ -9,8 +9,6 @@
 	excludesfile = /home/jpg/.gitignore_global
 [color]
 	ui = true
-[push]
-	default = simple
 [sendemail]
 	smtpencryption = tls
 	smtpserver = smtp.gmail.com

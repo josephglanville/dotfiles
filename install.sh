@@ -22,3 +22,22 @@ for file in $manifest; do
 	mkdir -p $path
 	cp $src $dest
 done
+
+VUNDLE_DIR=$HOME/.vim/bundle/vundle
+PWD=`pwd`
+
+mkdir -p $HOME/.vim/bundle
+if [ ! -d $VUNDLE_DIR ]; then
+    git clone github:gmarik/vundle $VUNDLE_DIR
+else
+    (cd $VUNDLE_DIR; git pull)
+fi
+
+vim +BundleInstall +qall
+
+OH_MY_ZSH_DIR=$HOME/.oh-my-zsh
+if [ ! -d $OH_MY_ZSH_DIR ]; then
+    git clone github:josephglanville/oh-my-zsh $OH_MY_ZSH_DIR
+else
+    (cd $OH_MY_ZSH_DIR; git pull)
+fi
