@@ -12,6 +12,7 @@ Bundle 'nono/vim-handlebars'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'smerrill/vagrant-vim'
 Bundle 'majutsushi/tagbar'
+Bundle 'jnwhiteh/vim-golang'
 filetype plugin indent on
 
 nnoremap <silent> <F9> :TagbarToggle<CR>
