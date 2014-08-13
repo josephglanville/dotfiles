@@ -9,8 +9,3 @@
 	excludesfile = /home/jpg/.gitignore_global
 [color]
 	ui = true
-[sendemail]
-	smtpencryption = tls
-	smtpserver = smtp.gmail.com
-	smtpuser = joseph@cloudscaling.com
-	smtpserverport = 587
