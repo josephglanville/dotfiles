@@ -14,13 +14,14 @@ zprofile:$HOME/.zprofile
 aliases:$HOME/.aliases
 aliases.linux:$HOME/.aliases.linux
 aliases.mac:$HOME/.aliases.mac
+bin:$HOME/bin
 "
 for file in $manifest; do
 	src=${file%%:*}
 	dest=${file##*:}
 	path=${dest%/*}
 	mkdir -p $path
-	cp $src $dest
+	cp -r $src $dest
 done
 
 VUNDLE_DIR=$HOME/.vim/bundle/vundle
