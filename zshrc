@@ -29,8 +29,12 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 
-# Customize to your needs...
+# Append $HOME/bin to PATH
 export PATH=$PATH:$HOME/bin
+# Prepend ChefDK to PATH
+# This nonsense is gross but required because vagrant-berkshelf refuses to
+# work with non-ChefDK versions for some reason.
+export PATH=/opt/chefdk/embedded/bin:$PATH
 
 export EDITOR="vim"
 
