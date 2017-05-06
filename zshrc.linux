@@ -26,7 +26,3 @@ alias suspend='sudo pm-suspend'
 
 # X related
 alias xresources-update='xrdb -merge ~/.Xresources'
-
-# Source code management
-alias commit='git commit -a'
-alias commitsigned='git commit -a --signoff'

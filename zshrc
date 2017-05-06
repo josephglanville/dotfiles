@@ -8,7 +8,7 @@ ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="prose"
 
 # Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
 # Comment this out to disable weekly auto-update checks
 DISABLE_AUTO_UPDATE="true"
@@ -24,19 +24,32 @@ DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git osx gradle)
 
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
+setopt EXTENDED_GLOB
 
-# Append $HOME/bin to PATH
-export PATH=$PATH:$HOME/bin
-# Prepend ChefDK to PATH
-# This nonsense is gross but required because vagrant-berkshelf refuses to
-# work with non-ChefDK versions for some reason.
-export PATH=/opt/chefdk/embedded/bin:$PATH
+# Prepend $HOME/bin to PATH
+export PATH="${HOME}/bin:${PATH}"
 
+# Set GOPATH to go workspace
+export GOPATH="$HOME/go"
+# Prepend GOPATH/bin to PATH
+export PATH="$GOPATH/bin:$PATH"
+
+# Set editor
 export EDITOR="vim"
 
-source $HOME/.mpdrc
-source $HOME/.aliases
+# Setup rbenv if installed
+if [ -d $HOME/.rbenv ]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi
+
+# Setup fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Platform specific zsh configuration
+[ -f ~/.zshrc.linux ] && source ~/.zshrc.linux
+[ -f ~/.zshrc.mac ] && source ~/.zshrc.mac

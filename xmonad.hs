@@ -31,7 +31,7 @@ myLayoutHook = onWorkspace "media" myFullscreen $
 
 
 main = do
-    xmproc <- spawnPipe "/usr/bin/xmobar /home/jpg/.xmobarrc"
+    xmproc <- spawnPipe "/usr/bin/xmobar ${HOME}/.xmobarrc"
     xmonad $ defaultConfig
 	{
 		manageHook = manageDocks <+> myManageHook <+> manageHook defaultConfig

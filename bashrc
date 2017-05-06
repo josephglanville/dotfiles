@@ -58,4 +58,26 @@ W="\e[0m"
 
 PS1="\[$B\]┌─\[$W\][ \[$Y\]\A \[$W\]][ \[$G\]\h:\w \[$W\]]\n\[$B\]└─\[$Y\]> \[$W\]"
 
-source $HOME/.aliases
+# Prepend $HOME/bin to PATH
+export PATH="${HOME}/bin:${PATH}"
+
+# Set GOPATH to go workspace
+export GOPATH="$HOME/go"
+# Prepend GOPATH/bin to PATH
+export PATH="$GOPATH/bin:$PATH"
+
+# Set editor
+export EDITOR="vim"
+
+# Setup rbenv if installed
+if [ -d $HOME/.rbenv ]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi
+
+# Setup fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Platform specific zsh configuration
+[ -f ~/.zshrc.linux ] && source ~/.zshrc.linux
+[ -f ~/.zshrc.mac ] && source ~/.zshrc.mac

@@ -1,5 +1,6 @@
 # Utilities and programs
-#alias ls='ls -h --color=auto'
+alias ls='ls -h --color=auto'
+alias vim='nvim'
 alias grep='grep --color=auto'
 alias more='less'
 alias df='df -h'
@@ -8,10 +9,17 @@ alias mkdir='mkdir -p -v'
 alias emacs='emacs -nw'
 alias su='sudo su'
 
-# Source code management
-alias commit='git commit -a'
-alias commitsigned='git commit -a --signoff'
+# Prepend brew bin/sbin dir to path
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
 
+# Override coreutils
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+
+# Set Vagrant default provider to vmware_fusion
+export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
+
+# Color man pages
 man() {
     env LESS_TERMCAP_mb=$'\E[01;31m' \
     LESS_TERMCAP_md=$'\E[01;38;5;74m' \

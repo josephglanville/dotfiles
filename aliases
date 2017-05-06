@@ -1,6 +1,0 @@
-if [ -f /proc ]; then
-    source .aliases.linux
-fi
-if [ -f /mach_kernel ]; then
-    source .aliases.mac
-fi
