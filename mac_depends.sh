@@ -16,8 +16,10 @@ gettext
 calc
 cloc
 coreutils
+go
 gradle
 neovim/neovim/neovim
+packer
 python
 python3
 zsh
