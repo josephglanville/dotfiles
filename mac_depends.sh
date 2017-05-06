@@ -20,8 +20,23 @@ neovim/neovim/neovim
 zsh
 "
 
+# Install brew cask
+brew tap caskroom/cask
+
 brew upgrade # To ensure that re-installs don't error
 brew install $PKGS
 
 # link gettext as it's keg-only
 brew link -f "gettext"
+
+CASKS="
+flux
+google-chrome
+intellij-idea-ce
+iterm2
+slack
+spotify
+visual-studio-code
+"
+
+brew cask install $CASKS
