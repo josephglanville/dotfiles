@@ -30,6 +30,7 @@ copy_all() {
 copy_mac() {
   copy zshrc.mac "$HOME/.zshrc.mac"
   copy settings.json "$HOME/Library/Application Support/Code/User/settings.json"
+  copy iterm2profile.plist "$HOME/Library/Application Support/iTerm2/DynamicProfiles/default.plist"
 }
 
 copy_linux() {
