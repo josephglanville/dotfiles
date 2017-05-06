@@ -30,13 +30,16 @@ brew install $PKGS
 brew link -f "gettext"
 
 CASKS="
+battle-net
 flux
 google-chrome
 intellij-idea-ce
 iterm2
+qbittorrent
 slack
 spotify
 visual-studio-code
+vlc
 "
 
 brew cask install $CASKS
