@@ -58,6 +58,7 @@ let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
+" Use One Dark colorscheme
 if (empty($TMUX))
   if (has("nvim"))
 	"For Neovim 0.1.3 and 0.1.4 <
@@ -68,6 +69,7 @@ if (empty($TMUX))
     set termguicolors
   endif
 endif
+
 set background=dark " for the dark version
 colorscheme one
 
