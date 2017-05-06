@@ -16,7 +16,10 @@ gettext
 calc
 cloc
 coreutils
+gradle
 neovim/neovim/neovim
+python
+python3
 zsh
 "
 
@@ -40,6 +43,17 @@ slack
 spotify
 visual-studio-code
 vlc
+zulu
 "
 
 brew cask install $CASKS
+
+# gradle requires java so has to be installed after zulu
+brew install gradle
+
+# Install Source Code Pro
+./install_source_code_pro.sh $HOME/Library/Fonts
+
+# Create code symlink
+CODE="/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code"
+[ ! -f /usr/local/bin/code ] && ln -s "${CODE}" /usr/local/bin/code

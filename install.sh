@@ -3,35 +3,48 @@
 set -eo pipefail
 
 copy() {
-  local f=$1
-  local src=${f%%:*}
-  local dest=${f##*:}
+  local src=$1
+  local dest=$2
   local path=${dest%/*}
   mkdir -p "${path}"
   echo "Copying $src to $dest"
   cp -r "${src}" "${dest}"
 }
 
-copyall() {
-  for f in $@; do
-    copy $f
-  done
-}
-
 template() {
-  local f=$1
-  local src=${f%%:*}
-  local dest=${f##*:}
+  local src=$1
+  local dest=$2
   local path=${dest%/*}
   mkdir -p "${path}"
   echo "Rendering template $src to $dest"
   envsubst < "${src}" > "${dest}"
 }
 
-templateall() {
-  for t in $@; do
-    template $t
-  done
+copy_all() {
+  copy bashrc "$HOME/.bashrc"
+  copy bin "$HOME/bin"
+  copy init.vim "$HOME/.config/nvim/init.vim"
+  copy zshrc "$HOME/.zshrc"
+}
+
+copy_mac() {
+  copy zshrc.mac "$HOME/.zshrc.mac"
+  copy settings.json "$HOME/Library/Application Support/Code/User/settings.json"
+}
+
+copy_linux() {
+  copy xinitrc "$HOME/.xinitrc"
+  copy xmobarrc "$HOME/.xmobarrc"
+  copy xresources "$HOME/.Xresources"
+  copy zshrc.linux "$HOME/.zshrc.linux"
+}
+
+template_all() {
+  template gitconfig "$HOME/.gitconfig"
+}
+
+template_linux() {
+  template xmonad.hs "$HOME/.xmonad/xmonad.hs"
 }
 
 # OS detection
@@ -42,50 +55,24 @@ if [ -f /System/Library/Kernels/kernel ]; then
     OS="mac"
 fi
 
-FILES="
-bashrc:$HOME/.bashrc
-bin:$HOME/bin
-init.vim:$HOME/.config/nvim/init.vim
-zshrc:$HOME/.zshrc
-"
-
-FILES_MAC="
-zshrc.mac:$HOME/.zshrc.mac
-"
-
-FILES_LINUX="
-xinitrc:$HOME/.xinitrc
-xmobarrc:$HOME/.xmobarrc
-xresources:$HOME/.Xresources
-zshrc.linux:$HOME/.zshrc.linux
-"
-
-TEMPLATES="
-gitconfig:$HOME/.gitconfig
-"
-
-TEMPLATES_LINUX="
-xmonad.hs:$HOME/.xmonad/xmonad.hs
-"
-
 # Install OS specific dependencies and files/templates
 case $OS in
   linux)
     ./linux_depends.sh
-    copyall $FILES_LINUX
-    templateall $TEMPLATES_LINUX
+    copy_linux
+    template_linux
     ;;
   mac)
     ./mac_depends.sh
-    copyall $FILES_MAC
+    copy_mac
     ;;
 esac
 
 # Install multi-platform files/templates
-copyall $FILES
-templateall $TEMPLATES
+copy_all
+template_all
 
-# Install vim-plug
+# Configure vim
 PLUG_VIM="${HOME}/.local/share/nvim/site/autoload/plug.vim"
 if [ ! -f "${PLUG_VIM}" ]; then
   curl -fLos "${PLUG_VIM}" --create-dirs \
@@ -100,3 +87,16 @@ if [ ! -d $OH_MY_ZSH_DIR ]; then
 else
   (cd "${OH_MY_ZSH_DIR}"; git pull)
 fi
+
+# Configure Visual Studio Code
+EXTENSIONS="
+donjayamanne.python
+lukehoban.Go
+mathiasfrohlich.Kotlin
+mauve.terraform
+zhuangtongfa.Material-theme
+"
+
+for e in $EXTENSIONS; do
+  code --install-extension $e
+done

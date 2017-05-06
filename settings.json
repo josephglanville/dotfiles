@@ -1,0 +1,8 @@
+{
+  "files.insertFinalNewline": true,
+  "workbench.colorTheme": "Material Theme",
+  "editor.fontFamily": "Source Code Pro",
+  "editor.formatOnSave": true,
+  "terraform.formatOnSave": true,
+  "python.pythonPath": "python3"
+}
