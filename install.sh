@@ -76,7 +76,7 @@ template_all
 # Configure vim
 PLUG_VIM="${HOME}/.local/share/nvim/site/autoload/plug.vim"
 if [ ! -f "${PLUG_VIM}" ]; then
-  curl -fLos "${PLUG_VIM}" --create-dirs \
+  curl -fLso "${PLUG_VIM}" --create-dirs \
     "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
 fi
 nvim +PlugInstall +qall
@@ -86,7 +86,7 @@ OH_MY_ZSH_DIR="${HOME}/.oh-my-zsh"
 if [ ! -d $OH_MY_ZSH_DIR ]; then
   git clone "https://github.com/josephglanville/oh-my-zsh" "${OH_MY_ZSH_DIR}"
 else
-  (cd "${OH_MY_ZSH_DIR}"; git pull)
+  (cd "${OH_MY_ZSH_DIR}"; git fetch && git reset --hard origin/master)
 fi
 
 # Configure Visual Studio Code

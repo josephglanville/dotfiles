@@ -61,3 +61,5 @@ brew install gradle
 # Create code symlink
 CODE="/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code"
 [ ! -f /usr/local/bin/code ] && ln -s "${CODE}" /usr/local/bin/code
+
+exit 0
