@@ -43,7 +43,9 @@ iterm2
 qbittorrent
 slack
 spotify
+vagrant
 visual-studio-code
+virtualbox
 vlc
 zulu
 "
