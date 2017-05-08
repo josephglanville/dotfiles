@@ -22,6 +22,7 @@ neovim/neovim/neovim
 packer
 python
 python3
+tree
 zsh
 "
 
