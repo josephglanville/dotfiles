@@ -18,6 +18,7 @@ cloc
 coreutils
 go
 gradle
+jq
 neovim/neovim/neovim
 packer
 python
