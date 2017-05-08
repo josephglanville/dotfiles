@@ -49,6 +49,7 @@ vagrant
 visual-studio-code
 virtualbox
 vlc
+wkhtmltopdf
 zulu
 "
 
