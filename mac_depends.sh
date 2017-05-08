@@ -36,6 +36,7 @@ brew link -f "gettext"
 
 CASKS="
 battle-net
+docker
 flux
 google-chrome
 intellij-idea-ce
