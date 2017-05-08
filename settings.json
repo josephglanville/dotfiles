@@ -1,6 +1,6 @@
 {
   "files.insertFinalNewline": true,
-  "workbench.colorTheme": "Material Theme",
+  "workbench.colorTheme": "One Dark Pro",
   "editor.fontFamily": "Source Code Pro",
   "editor.formatOnSave": true,
   "terraform.formatOnSave": true,
