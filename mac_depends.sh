@@ -11,6 +11,8 @@ fi
 
 # Install packages with homebrew
 PKGS="
+awscli
+cloc
 git
 gettext
 calc
@@ -20,10 +22,14 @@ go
 gradle
 jq
 neovim/neovim/neovim
+node
+oath-toolkit
 packer
 python
 python3
+ruby
 tree
+vim
 zsh
 "
 
