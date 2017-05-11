@@ -49,6 +49,7 @@ flux
 google-chrome
 intellij-idea-ce
 iterm2
+minikube
 qbittorrent
 slack
 spotify
