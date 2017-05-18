@@ -21,6 +21,8 @@ coreutils
 go
 gradle
 jq
+kubectl
+kubernetes-helm
 neovim/neovim/neovim
 node
 oath-toolkit
