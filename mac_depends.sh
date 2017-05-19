@@ -49,6 +49,7 @@ battle-net
 docker
 flux
 google-chrome
+google-cloud-sdk
 intellij-idea-ce
 iterm2
 minikube
