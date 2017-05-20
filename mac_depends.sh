@@ -23,6 +23,7 @@ gradle
 jq
 kubectl
 kubernetes-helm
+maven
 neovim/neovim/neovim
 node
 oath-toolkit
