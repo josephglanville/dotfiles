@@ -28,6 +28,7 @@ neovim/neovim/neovim
 node
 oath-toolkit
 packer
+postgres
 python
 python3
 ruby
