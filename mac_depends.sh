@@ -49,6 +49,7 @@ brew link -f "gettext"
 CASKS="
 battle-net
 docker
+dropbox
 flux
 google-chrome
 google-cloud-sdk
