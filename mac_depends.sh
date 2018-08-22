@@ -58,6 +58,7 @@ iterm2
 minikube
 qbittorrent
 slack
+sourcetree
 spotify
 vagrant
 visual-studio-code
