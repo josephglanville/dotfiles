@@ -22,6 +22,10 @@ Plug 'tfnico/vim-gradle'
 Plug 'scrooloose/nerdcommenter'
 Plug 'withgod/vim-sourcepawn'
 Plug 'dpwright/vim-tup'
+Plug 'leafgarland/typescript-vim'
+Plug 'udalov/kotlin-vim'
+Plug 'lifepillar/pgsql.vim'
+Plug 'google/vim-jsonnet'
 call plug#end()
 
 nnoremap <silent> <F9> :TagbarToggle<CR>
@@ -50,6 +54,9 @@ autocmd Filetype python setlocal ts=4 sts=4 sw=4
 let g:indentLine_color_term = 238
 let g:jellybeans_term_trans = 1
 let g:ruby_path='/usr/bin/ruby'
+
+" JSON settings
+let g:vim_json_syntax_conceal = 0
 
 " Go settings
 let g:go_highlight_functions = 1
