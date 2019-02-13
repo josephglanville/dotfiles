@@ -38,6 +38,11 @@ export GOPATH="$HOME/go"
 # Prepend GOPATH/bin to PATH
 export PATH="$GOPATH/bin:$PATH"
 
+# If in a virtualenv then add virtualenv/bin to PATH
+if [ -d $VIRTUAL_ENV ]; then
+  export PATH="$VIRTUAL_ENV/bin:$PATH"
+fi
+
 # Set editor
 export EDITOR="vim"
 
@@ -47,9 +52,12 @@ if [ -d $HOME/.rbenv ]; then
   eval "$(rbenv init -)"
 fi
 
-# Setup fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Setup direnv
+[ -f /usr/local/bin/direnv ] && eval "$(direnv hook zsh)"
 
 # Platform specific zsh configuration
 [ -f ~/.zshrc.linux ] && source ~/.zshrc.linux
 [ -f ~/.zshrc.mac ] && source ~/.zshrc.mac
+
+# Setup fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

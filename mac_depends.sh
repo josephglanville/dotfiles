@@ -22,6 +22,7 @@ go
 gradle
 jq
 kubectl
+kubectx
 kubernetes-helm
 maven
 neovim/neovim/neovim
