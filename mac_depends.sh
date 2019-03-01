@@ -18,6 +18,7 @@ gettext
 calc
 cloc
 coreutils
+fd
 go
 gradle
 jq
