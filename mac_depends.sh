@@ -59,9 +59,7 @@ jetbrains-toolbox
 minikube
 qbittorrent
 slack
-sourcetree
-spotify
-vagrant
+steam
 visual-studio-code
 virtualbox
 vlc
