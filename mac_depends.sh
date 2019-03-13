@@ -20,7 +20,6 @@ cloc
 coreutils
 fd
 go
-gradle
 jq
 kubectl
 kubectx
