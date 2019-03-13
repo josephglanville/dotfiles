@@ -54,8 +54,8 @@ dropbox
 flux
 google-chrome
 google-cloud-sdk
-intellij-idea-ce
 iterm2
+jetbrains-toolbox
 minikube
 qbittorrent
 slack
