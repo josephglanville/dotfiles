@@ -33,6 +33,7 @@ postgres
 python
 python3
 ruby
+rustup-init
 tree
 vim
 zsh
@@ -49,6 +50,7 @@ brew link -f "gettext"
 
 CASKS="
 battle-net
+discord
 docker
 dropbox
 flux
@@ -71,6 +73,9 @@ brew cask install $CASKS
 
 # gradle requires java so has to be installed after zulu
 brew install gradle
+
+# Setup Rust
+rustup-init -y
 
 # Install Source Code Pro
 ./install_source_code_pro.sh $HOME/Library/Fonts
