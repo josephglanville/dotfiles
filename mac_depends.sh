@@ -30,8 +30,8 @@ node
 oath-toolkit
 packer
 postgres
-python
-python3
+python@2
+python@3
 ruby
 rustup-init
 tree
