@@ -54,6 +54,7 @@ brew link -f "gettext"
 
 CASKS="
 docker
+firefox
 google-chrome
 google-cloud-sdk
 iterm2
