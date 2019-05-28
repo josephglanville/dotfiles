@@ -12,13 +12,13 @@ fi
 # Install packages with homebrew
 PKGS="
 awscli
-cloc
-git
-gettext
 calc
+cloc
 cloc
 coreutils
 fd
+gettext
+git
 go
 jq
 kubectl
@@ -49,24 +49,18 @@ brew install $PKGS
 brew link -f "gettext"
 
 CASKS="
-battle-net
-discord
+adoptopenjdk
 docker
-dropbox
-flux
 google-chrome
 google-cloud-sdk
 iterm2
 jetbrains-toolbox
-minikube
 qbittorrent
 slack
 steam
-visual-studio-code
 virtualbox
+visual-studio-code
 vlc
-wkhtmltopdf
-zulu
 "
 
 brew cask install $CASKS
