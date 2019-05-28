@@ -9,6 +9,13 @@ if [ ! -f /usr/local/bin/brew ]; then
   echo | /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+# Install brew cask
+brew tap caskroom/cask
+brew upgrade # To ensure that re-installs don't error
+
+# Install JDK so that Java apps can be installed
+brew cask install adoptopenjdk
+
 # Install packages with homebrew
 PKGS="
 awscli
@@ -20,13 +27,14 @@ fd
 gettext
 git
 go
+gradle
 jq
 kubectl
 kubectx
 kubernetes-helm
-maven
 neovim/neovim/neovim
 node
+maven
 oath-toolkit
 packer
 postgres
@@ -39,17 +47,12 @@ vim
 zsh
 "
 
-# Install brew cask
-brew tap caskroom/cask
-
-brew upgrade # To ensure that re-installs don't error
 brew install $PKGS
 
 # link gettext as it's keg-only
 brew link -f "gettext"
 
 CASKS="
-adoptopenjdk
 docker
 google-chrome
 google-cloud-sdk
@@ -64,9 +67,6 @@ vlc
 "
 
 brew cask install $CASKS
-
-# gradle requires java so has to be installed after zulu
-brew install gradle
 
 # Setup Rust
 rustup-init -y
