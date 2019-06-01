@@ -21,7 +21,6 @@ PKGS="
 awscli
 calc
 cloc
-cloc
 coreutils
 fd
 gettext
@@ -40,8 +39,11 @@ packer
 postgres
 python@2
 python@3
+ripgrep
 ruby
 rustup-init
+shellcheck
+tokei
 tree
 vim
 zsh

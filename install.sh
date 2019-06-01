@@ -80,6 +80,7 @@ if [ ! -f "${PLUG_VIM}" ]; then
     "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
 fi
 nvim +PlugInstall +qall
+nvim +GoInstallBinaries +qall
 
 # Install oh-my-zsh
 OH_MY_ZSH_DIR="${HOME}/.oh-my-zsh"
