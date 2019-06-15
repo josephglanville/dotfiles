@@ -9,12 +9,14 @@ if [ ! -f /usr/local/bin/brew ]; then
   echo | /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-# Install brew cask
-brew tap caskroom/cask
 brew upgrade # To ensure that re-installs don't error
 
 # Install JDK so that Java apps can be installed
-brew cask install adoptopenjdk
+brew tap AdoptOpenJDK/openjdk
+JDKS="8 11 12"
+for jdk in $JDKS; do
+  brew cask install "adoptopenjdk${JDK}"
+done
 
 # Install packages with homebrew
 PKGS="
