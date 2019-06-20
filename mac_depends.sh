@@ -30,6 +30,7 @@ git
 go
 gradle
 jq
+jsonnet
 kubectl
 kubectx
 kubernetes-helm

@@ -92,11 +92,12 @@ fi
 
 # Configure Visual Studio Code
 EXTENSIONS="
-donjayamanne.python
-lukehoban.Go
-mathiasfrohlich.Kotlin
+heptio.jsonnet
+mathiasfrohlich.kotlin
 mauve.terraform
-zhuangtongfa.Material-theme
+ms-python.python
+ms-vscode.go
+zhuangtongfa.material-theme
 "
 
 for e in $EXTENSIONS; do
