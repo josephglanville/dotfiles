@@ -103,3 +103,6 @@ zhuangtongfa.material-theme
 for e in $EXTENSIONS; do
   code --install-extension $e
 done
+
+# Install Python packages
+./python_depends.sh
