@@ -20,6 +20,7 @@ done
 
 # Install packages with homebrew
 PKGS="
+automake
 awscli
 calc
 cloc
@@ -34,6 +35,7 @@ jsonnet
 kubectl
 kubectx
 kubernetes-helm
+libtool
 maven
 neovim/neovim/neovim
 node
