@@ -73,6 +73,9 @@ esac
 copy_all
 template_all
 
+# Silence MOTD
+touch $HOME/.hushlogin
+
 # Configure vim
 PLUG_VIM="${HOME}/.local/share/nvim/site/autoload/plug.vim"
 if [ ! -f "${PLUG_VIM}" ]; then
