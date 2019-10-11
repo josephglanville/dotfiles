@@ -34,14 +34,15 @@ jsonnet
 kubectl
 kubectx
 kubernetes-helm
+maven
 neovim/neovim/neovim
 node
-maven
 oath-toolkit
 packer
 postgres
 python@2
 python@3
+re2
 ripgrep
 ruby
 rustup-init
