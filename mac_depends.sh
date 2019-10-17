@@ -61,6 +61,7 @@ brew install $PKGS
 brew link -f "gettext"
 
 CASKS="
+1password
 docker
 firefox
 google-chrome
