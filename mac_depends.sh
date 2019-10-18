@@ -70,6 +70,7 @@ iterm2
 jetbrains-toolbox
 qbittorrent
 slack
+stern
 steam
 virtualbox
 visual-studio-code
