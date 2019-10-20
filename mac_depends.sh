@@ -52,6 +52,7 @@ shellcheck
 tokei
 tree
 vim
+wget
 zsh
 "
 
