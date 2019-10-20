@@ -51,7 +51,7 @@ rustup-init
 shellcheck
 tokei
 tree
-vim
+vault
 wget
 zsh
 "
