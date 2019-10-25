@@ -59,6 +59,9 @@ zsh
 
 brew install $PKGS
 
+# Generate fzf files
+$(brew --prefix)/opt/fzf/install --key-bindings --completion --no-update-rc
+
 # link gettext as it's keg-only
 brew link -f "gettext"
 
