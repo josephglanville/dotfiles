@@ -26,6 +26,7 @@ calc
 cloc
 coreutils
 fd
+fzf
 gettext
 git
 go
