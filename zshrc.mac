@@ -16,9 +16,6 @@ export PATH="/usr/local/sbin:$PATH"
 # Override coreutils
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
-# Set Vagrant default provider to vmware_fusion
-export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
-
 # Color man pages
 man() {
     env LESS_TERMCAP_mb=$'\E[01;31m' \
