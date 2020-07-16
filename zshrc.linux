@@ -6,6 +6,7 @@ alias df='df -h'
 alias du='du -c -h'
 alias mkdir='mkdir -p -v'
 alias emacs='emacs -nw'
+alias vim='nvim'
 alias su='sudo su'
 
 # Service management

@@ -49,7 +49,7 @@ template_linux() {
 }
 
 # OS detection
-if [ -f /proc ]; then
+if [ -d /proc ]; then
     OS="linux"
 fi
 if [ -f /System/Library/Kernels/kernel ]; then
