@@ -9,6 +9,7 @@ Plug 'fatih/vim-go'
 Plug 'gmarik/vundle'
 Plug 'google/vim-jsonnet'
 Plug 'groenewege/vim-less'
+Plug 'hashivim/vim-terraform'
 Plug 'kchmck/vim-coffee-script'
 Plug 'leafgarland/typescript-vim'
 Plug 'lifepillar/pgsql.vim'
@@ -50,6 +51,7 @@ autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 autocmd Filetype coffee setlocal ts=2 sts=2 sw=2
 autocmd Filetype handlebars setlocal ts=2 sts=2 sw=2
 autocmd Filetype python setlocal ts=4 sts=4 sw=4
+autocmd Filetype jsonnet setlocal ts=2 sts=2 sw=2
 
 let g:indentLine_color_term = 238
 let g:jellybeans_term_trans = 1
@@ -64,6 +66,13 @@ let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+
+" Rust settings
+let g:rustfmt_autosave = 1
+
+" set Vim-specific sequences for RGB colors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 " Use One Dark colorscheme
 if (empty($TMUX))
