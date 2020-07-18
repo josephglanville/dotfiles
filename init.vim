@@ -70,6 +70,9 @@ let g:go_highlight_build_constraints = 1
 " Rust settings
 let g:rustfmt_autosave = 1
 
+" Terraform settings
+let g:terraform_fmt_on_save=1
+
 " set Vim-specific sequences for RGB colors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
