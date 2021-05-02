@@ -13,9 +13,9 @@ brew upgrade # To ensure that re-installs don't error
 
 # Install JDK so that Java apps can be installed
 brew tap AdoptOpenJDK/openjdk
-JDKS="8 11 12"
+JDKS="8 11 16"
 for jdk in $JDKS; do
-  brew cask install "adoptopenjdk${JDK}"
+  brew install --cask "adoptopenjdk${JDK}"
 done
 
 # Install packages with homebrew
@@ -28,7 +28,9 @@ coreutils
 fd
 fzf
 gettext
+gh
 git
+git-delta
 go
 gradle
 jq
@@ -38,18 +40,18 @@ kubectx
 kubernetes-helm
 libtool
 maven
-neovim/neovim/neovim
 node
+nvim
 oath-toolkit
 packer
 postgres
-python@2
-python@3
+python
 re2
 ripgrep
 ruby
 rustup-init
 shellcheck
+stern
 tokei
 tree
 vault
@@ -75,14 +77,13 @@ iterm2
 jetbrains-toolbox
 qbittorrent
 slack
-stern
 steam
 virtualbox
 visual-studio-code
 vlc
 "
 
-brew cask install $CASKS
+brew install --cask $CASKS
 
 # Setup Rust
 rustup-init -y
