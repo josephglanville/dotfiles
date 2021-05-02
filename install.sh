@@ -25,6 +25,7 @@ copy_all() {
   copy bin "$HOME/bin"
   copy init.vim "$HOME/.config/nvim/init.vim"
   copy zshrc "$HOME/.zshrc"
+  copy gh_config.yml "$HOME/.config/gh/config.yml"
 }
 
 copy_mac() {
