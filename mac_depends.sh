@@ -11,17 +11,11 @@ fi
 
 brew upgrade # To ensure that re-installs don't error
 
-# Install JDK so that Java apps can be installed
-brew tap AdoptOpenJDK/openjdk
-JDKS="8 11 16"
-for jdk in $JDKS; do
-  brew install --cask "adoptopenjdk${JDK}"
-done
-
 # Install packages with homebrew
 PKGS="
 automake
 awscli
+aws-vault
 calc
 cloc
 coreutils
@@ -43,6 +37,9 @@ maven
 node
 nvim
 oath-toolkit
+openjdk@8
+openjdk@11
+openjdk@15
 packer
 postgres
 python
@@ -66,6 +63,12 @@ $(brew --prefix)/opt/fzf/install --key-bindings --completion --no-update-rc
 
 # link gettext as it's keg-only
 brew link -f "gettext"
+
+# Symlink JDKs so they can be used with system Java wrapper
+JDKS="8 11 15"
+for jdk in $JDKS; do
+  sudo ln -sfn "/usr/local/opt/openjdk@${jdk}/libexec/openjdk.jdk" "/Library/Java/JavaVirtualMachines/openjdk-${jdk}.jdk"
+done
 
 CASKS="
 1password
