@@ -3,6 +3,9 @@
   "workbench.colorTheme": "One Dark Pro",
   "editor.fontFamily": "Source Code Pro",
   "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
   "terraform.formatOnSave": true,
   "python.pythonPath": "python3"
 }
